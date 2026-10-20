@@ -5,61 +5,85 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Exercise 4.1 - House and Garden</title>
     <style>
-        body { margin: 8px; }
+        body { 
+            margin: 8px; 
+            font-family: Arial, sans-serif;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
         svg { display: block; }
+        .section-title {
+            margin-top: 40px;
+            margin-bottom: 15px;
+            text-align: center;
+        }
     </style>
 </head>
 <body>
-<h1 style="text-align: center;">Step 1: Create a picture with SVG shapes</h1>
+
+<h1 class="section-title">Step 1: Create a picture with SVG shapes</h1>
+
 <svg width="494" height="491" viewBox="0 0 988 982" xmlns="http://www.w3.org/2000/svg">
-    <!-- Bầu trời -->
+    <!-- Sky -->
     <rect x="0" y="0" width="988" height="982" fill="#87CEEB" />
 
-    <!-- Cỏ -->
+    <!-- Grass -->
     <rect x="0" y="599" width="988" height="383" fill="#008000" />
 
-    <!-- Mặt trời -->
+    <!-- Sun -->
     <circle cx="798" cy="199" r="80" fill="#FFFF00" />
 
-    <!-- Thân cây -->
+    <!-- Tree trunk -->
     <rect x="158" y="499" width="40" height="200" fill="#A0522D" />
 
-    <!-- Tán cây (3 hình tròn) -->
+    <!-- Tree foliage (3 circles) -->
     <g fill="#228B22">
         <circle cx="138" cy="419" r="60" />
         <circle cx="218" cy="419" r="60" />
         <circle cx="178" cy="459" r="60" />
     </g>
 
-    <!-- Thân nhà -->
+    <!-- House body -->
     <rect x="298" y="399" width="400" height="300" fill="#8B4513" />
 
-    <!-- Mái nhà -->
+    <!-- Chimney (Added in Step 3 - Customisation with stroke) -->
+    <rect x="580" y="270" width="50" height="100" fill="#A0522D" stroke="#5c2c16" stroke-width="4" />
+
+    <!-- Roof -->
     <polygon points="498,199 298,399 698,399" fill="#CD853F" />
 
-    <!-- Cửa sổ -->
+    <!-- Windows -->
     <g fill="#ADD8E6">
         <rect x="338" y="439" width="80" height="80" />
         <rect x="578" y="439" width="80" height="80" />
     </g>
 
-    <!-- Cửa chính + tay nắm -->
+    <!-- Door + Doorknob -->
     <rect x="458" y="539" width="80" height="160" fill="#A0522D" />
     <circle cx="518" cy="619" r="10" fill="#000000" />
 
-    <!-- Lối đi (2 đường cong) -->
+    <!-- Path (2 curves) -->
     <g fill="none" stroke="#FFA500" stroke-width="10">
         <path d="M 470 699 C 330 725 255 765 280 815 C 310 875 420 910 462 982" />
         <path d="M 535 699 C 380 725 320 760 330 805 C 345 860 500 910 555 982" />
     </g>
 
-    <!-- Chữ -->
+    <!-- Text -->
     <text x="758" y="580" font-family="Verdana, Arial, sans-serif" font-size="48" fill="#000000">House</text>
 </svg>
-<!-- Phần Step 2: Chú thích hệ tọa độ SVG -->
-    <div style="margin-top: 40px; text-align: center; max-width: 600px; margin-left: auto; margin-right: auto;">
-        <h2>Step 2: Become familiar with the SVG coordinate system</h2>
-        <img src="annotation.png" alt="SVG Coordinates Annotation" style="width: 100%; border: 2px solid #333; border-radius: 8px; box-shadow: 0 4px 8px rgba(0,0,0,0.1);" />
-    </div>
+
+<!-- Step 2 Section -->
+<h1 class="section-title">Step 2: Become familiar with the SVG coordinate system</h1>
+<div style="margin-top: 10px; text-align: center; max-width: 600px; margin-left: auto; margin-right: auto;">
+    <img src="annotation.png" alt="SVG Coordinates Annotation" style="width: 100%; border: 2px solid #333; border-radius: 8px; box-shadow: 0 4px 8px rgba(0,0,0,0.1);" />
+</div>
+
+<!-- Step 3 Section -->
+<h1 class="section-title">Step 3: Customise your picture</h1>
+<p style="text-align: center; max-width: 700px; color: #555; line-height: 1.5;">
+    Customised the SVG picture by adding a <strong>house chimney</strong> (`<rect>`) using the <code>stroke</code> and <code>stroke-width</code> attributes, alongside layout enhancements.
+</p>
+
 </body>
 </html>
