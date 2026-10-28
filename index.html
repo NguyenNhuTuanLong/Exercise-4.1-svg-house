@@ -6,23 +6,60 @@
     <title>Exercise 4.1 - House and Garden</title>
     <style>
         body { 
-            margin: 8px; 
+            margin: 0; 
             font-family: Arial, sans-serif;
+            background-color: #f9f9f9;
+            color: #333;
             display: flex;
             flex-direction: column;
             align-items: center;
         }
-        svg { display: block; }
+        
+        /* Bổ sung thanh điều hướng cho Demo 2 */
+        .top-nav {
+            width: 100%;
+            background-color: #333;
+            color: white;
+            padding: 15px 0;
+            display: flex;
+            justify-content: space-around;
+            font-weight: bold;
+        }
+        .top-nav a { color: #4CAF50; text-decoration: none; }
+        .top-nav a:hover { color: #81c784; }
+
+        svg { 
+            display: block; 
+            background-color: white;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+            margin-top: 20px;
+        }
+
         .section-title {
             margin-top: 40px;
             margin-bottom: 15px;
             text-align: center;
+            color: #2c3e50;
         }
+
+        .desc-text {
+            text-align: center; 
+            max-width: 700px; 
+            line-height: 1.5;
+            color: #555;
+            margin: 0 auto;
+        }
+
         .img-container {
             margin-top: 10px;
             text-align: center;
             max-width: 600px;
         }
+
+        .dom-container {
+            max-width: 900px;
+        }
+
         .img-container img {
             width: 100%;
             height: auto;
@@ -34,61 +71,70 @@
 </head>
 <body>
 
-<h1 class="section-title">Step 1: Create a picture with SVG shapes</h1>
+    <!-- Thanh Navigation điều hướng bài tập -->
+    <nav class="top-nav">
+        <a href="#">&larr; Home</a>
+        <span>Exercise 4.1: Draw SVGs</span>
+        <a href="#">Exercise 4.3 &rarr;</a>
+    </nav>
 
-<svg width="494" height="491" viewBox="0 0 988 982" xmlns="http://www.w3.org/2000/svg">
-    <rect x="0" y="0" width="988" height="982" fill="#87CEEB" />
-    <rect x="0" y="599" width="988" height="383" fill="#008000" />
-    <circle cx="798" cy="199" r="80" fill="#FFFF00" />
-    <rect x="158" y="499" width="40" height="200" fill="#A0522D" />
-    
-    <g fill="#228B22">
-        <circle cx="138" cy="419" r="60" />
-        <circle cx="218" cy="419" r="60" />
-        <circle cx="178" cy="459" r="60" />
-    </g>
+    <h1 class="section-title">Step 1: Create a picture with SVG shapes</h1>
 
-    <rect x="298" y="399" width="400" height="300" fill="#8B4513" />
-    <rect x="580" y="270" width="50" height="100" fill="#A0522D" stroke="#5c2c16" stroke-width="4" />
-    <polygon points="498,199 298,399 698,399" fill="#CD853F" />
+    <svg width="494" height="491" viewBox="0 0 988 982" xmlns="http://www.w3.org/2000/svg">
+        <rect x="0" y="0" width="988" height="982" fill="#87CEEB" />
+        <rect x="0" y="599" width="988" height="383" fill="#008000" />
+        <circle cx="798" cy="199" r="80" fill="#FFFF00" />
+        <rect x="158" y="499" width="40" height="200" fill="#A0522D" />
+        
+        <g fill="#228B22">
+            <circle cx="138" cy="419" r="60" />
+            <circle cx="218" cy="419" r="60" />
+            <circle cx="178" cy="459" r="60" />
+        </g>
 
-    <g fill="#ADD8E6" stroke="#000000" stroke-width="2">
-        <rect width="80" height="80" transform="translate(338, 439)" />
-        <rect width="80" height="80" transform="translate(578, 439)" />
-    </g>
+        <rect x="298" y="399" width="400" height="300" fill="#8B4513" />
+        <rect x="580" y="270" width="50" height="100" fill="#A0522D" stroke="#5c2c16" stroke-width="4" />
+        <polygon points="498,199 298,399 698,399" fill="#CD853F" />
 
-    <rect x="458" y="539" width="80" height="160" fill="#A0522D" />
-    <circle cx="518" cy="619" r="10" fill="#000000" />
+        <g fill="#ADD8E6" stroke="#000000" stroke-width="2">
+            <rect width="80" height="80" transform="translate(338, 439)" />
+            <rect width="80" height="80" transform="translate(578, 439)" />
+        </g>
 
-    <g fill="none" stroke="#FFA500" stroke-width="10">
-        <path d="M 470 699 C 330 725 255 765 280 815 C 310 875 420 910 462 982" />
-        <path d="M 535 699 C 380 725 320 760 330 805 C 345 860 500 910 555 982" />
-    </g>
+        <rect x="458" y="539" width="80" height="160" fill="#A0522D" />
+        <circle cx="518" cy="619" r="10" fill="#000000" />
 
-    <text x="758" y="580" font-family="Verdana, Arial, sans-serif" font-size="48" fill="#000000">House</text>
-</svg>
+        <g fill="none" stroke="#FFA500" stroke-width="10">
+            <path d="M 470 699 C 330 725 255 765 280 815 C 310 875 420 910 462 982" />
+            <path d="M 535 699 C 380 725 320 760 330 805 C 345 860 500 910 555 982" />
+        </g>
 
-<h1 class="section-title">Step 2: Become familiar with the SVG coordinate system</h1>
-<div class="img-container">
-    <img src="annotation.png" alt="SVG Coordinates Annotation" />
-</div>
+        <text x="758" y="580" font-family="Verdana, Arial, sans-serif" font-size="48" fill="#000000">House</text>
+    </svg>
 
-<h1 class="section-title">Step 3: Customise your picture</h1>
-<p style="text-align: center; max-width: 700px; color: #555; line-height: 1.5;">
-    Customised the SVG picture by adding a house chimney using the stroke and stroke-width attributes, alongside layout enhancements.
-</p>
+    <h1 class="section-title">Step 2: Become familiar with the SVG coordinate system</h1>
+    <div class="img-container">
+        <!-- Đọc file ảnh trực tiếp cùng cấp thư mục -->
+        <img src="annotation.png" alt="SVG Coordinates Annotation" />
+    </div>
 
-<h1 class="section-title">Step 4: Become familiar with the group element</h1>
-<p style="text-align: center; max-width: 700px; color: #555; line-height: 1.5;">
-    Grouped two window elements inside a single &lt;g&gt; tag to share identical fill and stroke styles, and positioned them using the transform="translate(x, y)" attribute.
-</p>
+    <h1 class="section-title">Step 3: Customise your picture</h1>
+    <p class="desc-text">
+        Customised the SVG picture by adding a house chimney using the stroke and stroke-width attributes, alongside layout enhancements.
+    </p>
 
-<h1 style="text-align: center; margin-top: 40px;">Step 5: View the DOM</h1>
-    <div style="margin-top: 10px; text-align: center; max-width: 900px; margin-left: auto; margin-right: auto;">
-        <p style="margin-bottom: 20px;">
+    <h1 class="section-title">Step 4: Become familiar with the group element</h1>
+    <p class="desc-text">
+        Grouped two window elements inside a single &lt;g&gt; tag to share identical fill and stroke styles, and positioned them using the transform="translate(x, y)" attribute.
+    </p>
+
+    <h1 class="section-title">Step 5: View the DOM</h1>
+    <div class="img-container dom-container">
+        <p class="desc-text" style="margin-bottom: 20px;">
             Here is a screenshot of the SVG image alongside its corresponding structure inside the browser's DOM, observed using Developer Tools.
         </p>
-        <img src="dom_screenshot.png" alt="SVG and DOM Inspector Screenshot" style="width: 100%; border: 2px solid #333; border-radius: 8px; box-shadow: 0 4px 8px rgba(0,0,0,0.1);" />
+        <!-- Đọc file ảnh trực tiếp cùng cấp thư mục -->
+        <img src="dom_screenshot.png" alt="SVG and DOM Inspector Screenshot" />
     </div>
     
 </body>

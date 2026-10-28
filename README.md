@@ -1,2 +1,2 @@
 # dv-03-svg-exercise
-COS30045
+Exercise 4.1 - COS30045
